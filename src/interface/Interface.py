@@ -1,11 +1,12 @@
 class Interface:
     MENU = (
-        """1- View Due Tasks        
-2- Add Task
-3- Delete Task
-4- Complete Task"""
+        """1- View Due Tasks
+2- View Tasks
+3- Add Task
+4- Delete Task
+5- Complete Task"""
     )
-    OPTIONS_NO = 4
+    OPTIONS_NO = 5
 
     @staticmethod
     def take_option(end, start = 1) -> int:

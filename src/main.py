@@ -2,7 +2,6 @@ from datetime import datetime
 from typing import TextIO
 
 
-FILE_NAME = "repeated_tasks.csv"
 
 
 def main():
