@@ -14,5 +14,8 @@ class TasksManager:
     def delete_task(self, task_name: str) -> bool:
         ...
 
-    def add_task(self, task_name: str, task_repetition: int):
+    def add_task(self, task_name: str, task_repetition: int) -> bool:
+        ...
+
+    def task_exists(self, task_name: str) -> bool:
         ...

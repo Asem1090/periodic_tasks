@@ -1,32 +1,15 @@
 from datetime import datetime
 from typing import TextIO
 
-
+from src.main_scripts.MainClass import MainClass
 
 
 def main():
-    close = False
-
-    while not close:
-        option = take_option()
-
-        if option == 1:
-            print_due_tasks()
-        elif option == 2:
-            add_task()
-        elif option == 3:
-            delete_task()
-        elif option == 4:
-            complete_task()
-
-        while True:
-            option = input("Go back to the menu? (Y/N): ").upper()
-
-            if option in ("Y", "N"):
-                close = (option == "N")
-                break
+    MainClass.run()
 
 
+if __name__ == "__main__":
+    main()
 
 
 def add_task() -> None:
@@ -160,7 +143,3 @@ def complete_task(task_name: str) -> bool:
             file.writelines(lines)
 
     return task_exists
-
-
-if __name__ == "__main__":
-    main()

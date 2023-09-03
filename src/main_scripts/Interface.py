@@ -1,3 +1,6 @@
+from src.data.managers.tasks_manager import TasksManager
+
+
 class Interface:
     MENU = (
         """1- View Due Tasks
@@ -7,7 +10,7 @@ class Interface:
 5- Delete Task"""
     )
     OPTIONS_NO = 5
-    task_manager = TasksManager()
+    tasks_manager = TasksManager()
 
     @staticmethod
     def take_option(end, start=1) -> int:
@@ -23,11 +26,12 @@ class Interface:
 
         return option
 
-    def take_new_task(self) -> tuple[str, int]:
+    @staticmethod
+    def take_new_task() -> tuple[str, int]:
         while True:
             task_name = input("Please enter the task name: ")
 
-            if not tasks_manager.task_exists(task_name):
+            if not Interface.tasks_manager.task_exists(task_name):
                 break
 
         while True:
@@ -41,12 +45,12 @@ class Interface:
 
         return task_name, task_repetition
 
-    @static_method
-    def take_existing_task_name(self) -> str:
+    @staticmethod
+    def take_existing_task_name() -> str:
         while True:
             task_name = input("Please enter the task name: ")
 
-            if tasks_manager.task_exists(task_name):
+            if Interface.tasks_manager.task_exists(task_name):
                 break
 
         return task_name
@@ -56,15 +60,15 @@ class Interface:
         picked_option = self.take_option()
 
         if picked_option == 1:
-            print(task_manager.get_due_tasks())
+            print(Interface.tasks_manager.get_due_tasks())
         elif picked_option == 2:
-            print(task_manager.get_tasks())
+            print(Interface.tasks_manager.get_tasks())
         elif picked_option == 3:
             task = self.take_new_task()
-            task_manager.add_task(*task)
+            Interface.tasks_manager.add_task(*task)
         elif picked_option == 4:
             task_name = self.take_existing_task_name()
-            task_manager.complete_task(task_name)
+            Interface.tasks_manager.complete_task(task_name)
         elif picked_option == 5:
             task_name = self.take_existing_task_name()
-            task_manager.delete_task(task_name)
+            Interface.tasks_manager.delete_task(task_name)
