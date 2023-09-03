@@ -13,7 +13,8 @@ class MainClass:
                 print(f"An error occurred: {e}")
 
             while True:
-                close = input("Continue? (Y/N): ").upper()
+                ans = input("Continue? (Y/N): ").upper()
 
-                if close in {"Y", "N"}:
+                if ans in {"Y", "N"}:
+                    close = (ans == "N")
                     break
