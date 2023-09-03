@@ -1,4 +1,4 @@
-from datetime import datetime
+
 from typing import TextIO
 
 from src.main_scripts.MainClass import MainClass
@@ -43,10 +43,6 @@ def add_task() -> None:
         write_task(task_name, task_repetition)
 
 
-def get_csv_line(task_name: str, task_repetition: int, last_completion_date: str = "") -> str:
-    return f"{task_name},{task_repetition},{last_completion_date}"
-
-
 def task_exist(task_name: str) -> tuple[int, str]:
     with open(FILE_NAME, "r") as file:
         lines = file.readlines()
@@ -56,10 +52,6 @@ def task_exist(task_name: str) -> tuple[int, str]:
                 return line_index, lines[line_index]
 
         return -1, ""
-
-
-def is_due(last_completion_date: str) -> bool:
-    pass
 
 
 def get_tasks() -> list:
