@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from datetime import datetime
 
+from src.data import DATETIME_FORMAT
+
 
 class Task:
-    DATETIME_FORMAT = "%d/%m/%Y %H:%M"
-
-    def __init__(self, name: str, task_repetition: int, last_completion_date: datetime = None):
+    def __init__(self, name: str, task_repetition: int, last_completion_date: datetime):
         self.name = name
         self.repetition = int(task_repetition)
         self.last_completion_date = last_completion_date
@@ -18,13 +18,14 @@ class Task:
     def from_csv(csv_line: str) -> Task:
         task_name, task_repetition, last_completion_date = csv_line.split(",")
 
-        return Task(task_name, task_repetition, datetime.strptime(last_completion_date, Task.DATETIME_FORMAT))
+        return Task(task_name, task_repetition, datetime.strptime(last_completion_date, DATETIME_FORMAT))
 
-    def to_csv(self, last_completion_date: datetime = None):
-        if last_completion_date is None:
-            last_completion_date = datetime.now()
+    @staticmethod
+    def task_to_csv(name: str, repetition: int, last_completion_date: datetime):
+        return f"{name},{repetition},{last_completion_date.strftime(DATETIME_FORMAT)}"
 
-        return f"{self.name},{self.repetition},{last_completion_date.strftime(Task.DATETIME_FORMAT)}"
+    def to_csv(self):
+        return f"{self.name},{self.repetition},{self.last_completion_date.strftime(DATETIME_FORMAT)}"
 
     def is_due(self) -> bool:
         pass

@@ -60,9 +60,9 @@ class Interface:
         picked_option = self.take_option()
 
         if picked_option == 1:
-            print(Interface.tasks_manager.get_due_tasks)
+            print(Interface.tasks_manager.get_due_tasks())
         elif picked_option == 2:
-            print(Interface.tasks_manager.tasks)
+            print(Interface.tasks_manager.get_tasks())
         elif picked_option == 3:
             task = self.take_new_task()
             Interface.tasks_manager.add_task(*task)
