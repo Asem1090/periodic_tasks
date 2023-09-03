@@ -25,3 +25,6 @@ class Task:
             last_completion_date = datetime.now()
 
         return f"{self.name},{self.repetition},{last_completion_date.strftime(Task.DATETIME_FORMAT)}"
+
+    def is_due(self) -> bool:
+        pass
