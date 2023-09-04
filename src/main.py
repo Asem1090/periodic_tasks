@@ -1,5 +1,3 @@
-from typing import TextIO
-
 from src.main_scripts.MainClass import MainClass
 
 

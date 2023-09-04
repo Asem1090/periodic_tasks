@@ -60,7 +60,7 @@ class Interface:
 
     @staticmethod
     def print_tasks(tasks):
-        print(f"{'Task No.':<10}{'Name':<25}{'Repetition':<5}{'last_completion_date':<20}")
+        print(f"{'Task No.':<10}{'Name':<25}{'Repetition':<15}{'last_completion_date':<20}")
         for task_no, task in enumerate(tasks, start=1):
             print(f"{'Task No.':<10}{task}")
 

@@ -12,7 +12,7 @@ class Task:
         self.last_completion_date = last_completion_date
 
     def __str__(self):
-        return f"{self.name:<25}{self.repetition:<5}{self.last_completion_date:<20}"
+        return f"{self.name:<25}{self.repetition:<10}{self.last_completion_date:<20}"
 
     @staticmethod
     def from_csv(csv_line: str) -> Task:
@@ -28,4 +28,4 @@ class Task:
         return f"{self.name},{self.repetition},{self.last_completion_date.strftime(DATETIME_FORMAT)}"
 
     def is_due(self) -> bool:
-        return datetime.now() - self.last_completion_date >= self.repetition
+        return (datetime.now() - self.last_completion_date).days >= self.repetition

@@ -10,7 +10,7 @@ class TasksManager:
     file = None
 
     def __init__(self):
-        with open(TasksManager.FILE_PATH, "w"):
+        with open(TasksManager.FILE_PATH, "a"):
             ...
 
         if TasksManager.file is None:
