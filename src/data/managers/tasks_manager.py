@@ -6,7 +6,14 @@ from src.data.Task import Task
 
 class TasksManager:
     FILE_NAME = "repeated_tasks.csv"
-    file = open(FILE_NAME, "r+")
+    file = None
+
+    def __init__(self):
+        with open(TasksManager.FILE_NAME, "w"):
+            ...
+
+        if TasksManager.file is None:
+            TasksManager.file = open(TasksManager.FILE_NAME, "r+")
 
     @staticmethod
     def get_tasks() -> set[Task]:

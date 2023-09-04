@@ -55,20 +55,27 @@ class Interface:
 
         return task_name
 
-    def start_menu(self):
+    @staticmethod
+    def print_tasks(tasks):
+        print(f"{'Task No.':<10}{'Name':<25}{'Repetition':<5}{'last_completion_date':<20}")
+        for task_no, task in enumerate(tasks, start=1):
+            print(f"{'Task No.':<10}{task}")
+
+    @staticmethod
+    def start_menu():
         print(Interface.MENU)
-        picked_option = self.take_option()
+        picked_option = Interface.take_option()
 
         if picked_option == 1:
-            print(Interface.tasks_manager.get_due_tasks())
+            Interface.print_tasks(Interface.tasks_manager.get_due_tasks())
         elif picked_option == 2:
-            print(Interface.tasks_manager.get_tasks())
+            Interface.print_tasks(Interface.tasks_manager.get_tasks())
         elif picked_option == 3:
-            task = self.take_new_task()
+            task = Interface.take_new_task()
             Interface.tasks_manager.add_new_task(*task),
         elif picked_option == 4:
-            task_name = self.take_existing_task_name()
+            task_name = Interface.take_existing_task_name()
             Interface.tasks_manager.complete_task(task_name)
         elif picked_option == 5:
-            task_name = self.take_existing_task_name()
+            task_name = Interface.take_existing_task_name()
             Interface.tasks_manager.delete_task(task_name)

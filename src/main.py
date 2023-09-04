@@ -1,4 +1,3 @@
-
 from typing import TextIO
 
 from src.main_scripts.MainClass import MainClass
@@ -10,53 +9,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-def add_task() -> None:
-    replace = "Y"
-    task_name = input("Task Name: ")
-
-    line_no, task_details = task_exist(task_name)
-
-    if line_no != -1:
-        while True:
-            replace = input(f"Task with same name exists:\n{task_details}\n Do you want to replace it? (Y/N): ").upper()
-
-            if replace in {"Y", "N"}:
-                break
-
-        if replace == "N":
-            return
-
-    while True:
-        try:
-            task_repetition = int(input("Repetition (# days): "))
-
-            if task_repetition > 0:
-                break
-        except ValueError as e:
-            continue
-
-    if replace == "Y":
-        replace_task(line_no, task_name, task_repetition)
-    else:
-        write_task(task_name, task_repetition)
-
-
-def task_exist(task_name: str) -> tuple[int, str]:
-    with open(FILE_NAME, "r") as file:
-        lines = file.readlines()
-
-        for line_index in range(len(lines)):
-            if lines[line_index].split(",")[0] == task_name:
-                return line_index, lines[line_index]
-
-        return -1, ""
-
-
-def get_tasks() -> list:
-    with open(FILE_NAME, "r") as file:
-        return file.read().splitlines()
 
 
 def print_tasks() -> None:
@@ -79,59 +31,3 @@ def print_due_tasks() -> None:
         if is_due(last_completion_date):
             print(f"{line_no:<10}{task_name:<25}{repetition:<5}{last_completion_date:<20}")
 
-
-def write_task(task_name: str, task_repetition) -> None:
-    with open(FILE_NAME, "a") as file:
-        file.write(get_csv_line(task_name, task_repetition))
-
-
-def move_to_line(file: TextIO, line_index) -> None:
-    for _ in range(line_index):
-        file.readline()
-
-
-def replace_task(line_index: int, task_name: str, task_repetition: int) -> None:
-    with open(FILE_NAME, "w+") as file:
-        move_to_line(file, line_index)
-        file.write(get_csv_line(task_name, task_repetition))
-
-        # file.writelines([*lines[:line_index], get_csv_line(task_name, task_repetition), *lines[line_index + 1:]])
-
-
-def delete_task(task_name: str) -> bool:
-    task_exists = False
-
-    with open(FILE_NAME, "r") as file:
-        lines = file.readlines()
-
-        for line_no, line_details in enumerate(lines):
-            if line_details.split(",")[0] == task_name:
-                lines.pop(line_no)
-                task_exists = True
-
-    if task_exists:
-        with open(FILE_NAME, "w") as file:
-            file.writelines(lines)
-
-    return task_exists
-
-
-def complete_task(task_name: str) -> bool:
-    task_exists = False
-
-    with open(FILE_NAME, "r") as file:
-        lines = file.readlines()
-
-        for line_no, line_details in enumerate(lines):
-            if line_details.split(",")[0] == task_name:
-                task = line_details.split(",")
-                task[2] = datetime.now()  # Updating Last Completion Date
-                lines[line_no] = ",".join(task)
-
-                task_exists = True
-
-    if task_exists:
-        with open(FILE_NAME, "w") as file:
-            file.writelines(lines)
-
-    return task_exists
