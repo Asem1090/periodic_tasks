@@ -1,3 +1,6 @@
+from datetime import datetime
+
+from src.data.Task import Task
 from src.data.managers.tasks_manager import TasksManager
 
 
@@ -13,12 +16,12 @@ class Interface:
     tasks_manager = TasksManager()
 
     @staticmethod
-    def take_option(end, start=1) -> int:
+    def take_option() -> int:
         while True:
             try:
-                option = int(input(f"Please pick an option ({start}-{end}): "))
+                option = int(input(f"Please pick an option (1-{Interface.OPTIONS_NO}): "))
 
-                if start <= option <= end:
+                if 1 <= option <= Interface.OPTIONS_NO:
                     break
 
             except ValueError as e:
@@ -72,7 +75,7 @@ class Interface:
             Interface.print_tasks(Interface.tasks_manager.get_tasks())
         elif picked_option == 3:
             task = Interface.take_new_task()
-            Interface.tasks_manager.add_new_task(*task),
+            Interface.tasks_manager.add_new_task(task),
         elif picked_option == 4:
             task_name = Interface.take_existing_task_name()
             Interface.tasks_manager.complete_task(task_name)

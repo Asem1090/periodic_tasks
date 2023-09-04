@@ -5,15 +5,16 @@ from src.data.Task import Task
 
 
 class TasksManager:
-    FILE_NAME = "repeated_tasks.csv"
+    FILE_PATH = 'data/repeated_tasks.csv'
+
     file = None
 
     def __init__(self):
-        with open(TasksManager.FILE_NAME, "w"):
+        with open(TasksManager.FILE_PATH, "w"):
             ...
 
         if TasksManager.file is None:
-            TasksManager.file = open(TasksManager.FILE_NAME, "r+")
+            TasksManager.file = open(TasksManager.FILE_PATH, "r+")
 
     @staticmethod
     def get_tasks() -> set[Task]:
@@ -33,7 +34,7 @@ class TasksManager:
 
     @staticmethod
     def add_new_task(task: Task) -> bool:
-        if TasksManager.task_exists(task_name):
+        if TasksManager.task_exists(task.name):
             return False
 
         TasksManager.file.seek(0, 2)
