@@ -28,4 +28,4 @@ class Task:
         return f"{self.name},{self.repetition},{self.last_completion_date.strftime(DATETIME_FORMAT)}"
 
     def is_due(self) -> bool:
-        pass
+        return datetime.now() - self.last_completion_date >= self.repetition
