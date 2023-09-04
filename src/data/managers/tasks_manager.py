@@ -17,7 +17,7 @@ class TasksManager:
         return {Task.from_csv(line) for line in lines}
 
     @staticmethod
-    def get_due_tasks(self) -> set[Task]:
+    def get_due_tasks() -> set[Task]:
         TasksManager.file.seek(0)
 
         lines = TasksManager.file.read().splitlines()
@@ -25,12 +25,12 @@ class TasksManager:
         return {task for line in lines if (task := Task.from_csv(line)).is_due()}
 
     @staticmethod
-    def add_task(task_name: str, task_repetition: int) -> bool:
+    def add_new_task(task: Task) -> bool:
         if TasksManager.task_exists(task_name):
             return False
 
         TasksManager.file.seek(0, 2)
-        TasksManager.file.write(Task.task_to_csv(task_name, task_repetition, datetime.now()))
+        TasksManager.file.write(task.to_csv())
 
         return True
 

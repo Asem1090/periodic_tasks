@@ -27,7 +27,7 @@ class Interface:
         return option
 
     @staticmethod
-    def take_new_task() -> tuple[str, int]:
+    def take_new_task() -> Task:
         while True:
             task_name = input("Please enter the task name: ")
 
@@ -43,7 +43,7 @@ class Interface:
             except ValueError as e:
                 continue
 
-        return task_name, task_repetition
+        return Task(task_name, task_repetition, datetime.now())
 
     @staticmethod
     def take_existing_task_name() -> str:
@@ -65,7 +65,7 @@ class Interface:
             print(Interface.tasks_manager.get_tasks())
         elif picked_option == 3:
             task = self.take_new_task()
-            Interface.tasks_manager.add_task(*task)
+            Interface.tasks_manager.add_new_task(*task),
         elif picked_option == 4:
             task_name = self.take_existing_task_name()
             Interface.tasks_manager.complete_task(task_name)

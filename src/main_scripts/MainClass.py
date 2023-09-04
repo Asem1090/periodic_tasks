@@ -4,9 +4,7 @@ from src.main_scripts.Interface import Interface
 class MainClass:
     @staticmethod
     def run():
-        close = False
-
-        while not close:
+        while True:
             try:
                 Interface.start_menu()
             except Exception as e:
@@ -16,5 +14,7 @@ class MainClass:
                 ans = input("Continue? (Y/N): ").upper()
 
                 if ans in {"Y", "N"}:
-                    close = (ans == "N")
                     break
+
+            if ans == "N":
+                break
