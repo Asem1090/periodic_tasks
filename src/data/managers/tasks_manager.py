@@ -50,7 +50,7 @@ class TasksManager:
             name, repetition, last_completion_date = line.split(",")
 
             if name == task_name:
-                TasksManager.file.seek(-16, 1)
+                TasksManager.file.seek(-19, 1)
                 TasksManager.file.write(datetime.now().strftime(DATETIME_FORMAT))
                 return True
 

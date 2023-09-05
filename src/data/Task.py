@@ -12,20 +12,20 @@ class Task:
         self.last_completion_date = last_completion_date
 
     def __str__(self):
-        return f"{self.name:<25}{self.repetition:<10}{self.last_completion_date:<20}"
+        return f"{self.name:<25}{self.repetition:<15}{self.last_completion_date:<20}\n"
 
     @staticmethod
     def from_csv(csv_line: str) -> Task:
-        task_name, task_repetition, last_completion_date = csv_line.split(",")
+        task_name, task_repetition, last_completion_date = csv_line.rstrip("\n").split(",")
 
         return Task(task_name, task_repetition, datetime.strptime(last_completion_date, DATETIME_FORMAT))
 
     @staticmethod
     def task_to_csv(name: str, repetition: int, last_completion_date: datetime):
-        return f"{name},{repetition},{last_completion_date.strftime(DATETIME_FORMAT)}"
+        return f"{name},{repetition},{last_completion_date.strftime(DATETIME_FORMAT)}\n"
 
     def to_csv(self):
-        return f"{self.name},{self.repetition},{self.last_completion_date.strftime(DATETIME_FORMAT)}"
+        return Task.task_to_csv(self.name, self.repetition, self.last_completion_date)
 
     def is_due(self) -> bool:
         return (datetime.now() - self.last_completion_date).days >= self.repetition
