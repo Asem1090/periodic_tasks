@@ -1,6 +1,5 @@
 from datetime import datetime
 
-from src.data import DATETIME_FORMAT
 from src.data.Task import Task
 
 
@@ -51,7 +50,7 @@ class TasksManager:
 
             if name == task_name:
                 TasksManager.file.seek(-19, 1)
-                TasksManager.file.write(datetime.now().strftime(DATETIME_FORMAT))
+                TasksManager.file.write(datetime.now().strftime(Task.DATETIME_FORMAT))
                 return True
 
         return False
