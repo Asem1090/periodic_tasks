@@ -60,9 +60,15 @@ class Interface:
 
     @staticmethod
     def print_tasks(tasks):
-        print(f"{'Task No.':<10}{'Name':<25}{'Repetition':<15}{'last_completion_date':<20}")
-        for task_no, task in enumerate(tasks, start=1):
-            print(f"{'Task No.':<10}{task}")
+        print(Task.TASK_PRINT_FORMAT.format(
+                name="Name:",
+                repetition="Repetition",
+                last_completion_date="last_completion_date"
+            )
+        )
+
+        for task in tasks:
+            print(task)
 
     @staticmethod
     def start_menu():

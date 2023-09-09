@@ -43,17 +43,15 @@ class TasksManager:
 
     @staticmethod
     def complete_task(task_name: str) -> bool:
-        TasksManager.file.seek(0)
+        with open(TasksManager.FILE_PATH, "rb+") as file:
+            while (line := file.readline().decode("utf-8")) != "":
+                name = line.split(",", 1)[0]
+                if name == task_name:
+                    file.seek(-17, 1)
+                    file.write(datetime.now().strftime(Task.DATETIME_FORMAT).encode("utf-8"))
+                    return True
 
-        while (line := TasksManager.file.readline()) != "":
-            name, repetition, last_completion_date = line.split(",")
-
-            if name == task_name:
-                TasksManager.file.seek(-19, 1)
-                TasksManager.file.write(datetime.now().strftime(Task.DATETIME_FORMAT))
-                return True
-
-        return False
+            return False
 
     @staticmethod
     def delete_task(task_name: str) -> bool:
