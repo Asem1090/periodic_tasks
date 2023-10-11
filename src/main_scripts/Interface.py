@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from src.data.Task import Task
-from src.data.managers._tasks_manager import TasksManager
+from src.data.managers.tasks_manager import TasksManager
 
 
 class Interface:
@@ -30,7 +30,7 @@ class Interface:
         return option
 
     @staticmethod
-    def take_new_task() -> tuple:
+    def take_new_task() -> Task:
         while True:
             task_name = input("Please enter the task name: ")
 
@@ -46,7 +46,7 @@ class Interface:
             except ValueError as e:
                 continue
 
-        return task_name, task_repetition, datetime.now()
+        return Task(task_name, task_repetition, datetime.now())
 
     @staticmethod
     def take_existing_task_name() -> str:
@@ -60,19 +60,15 @@ class Interface:
 
     @staticmethod
     def print_tasks(tasks):
-        print(TasksManager.TASK_PRINT_FORMAT.format(
+        print(Task.TASK_PRINT_FORMAT.format(
                 name="Name:",
                 repetition="Repetition",
                 last_completion_date="last_completion_date"
             )
         )
 
-        for name, properties in tasks.items():
-            print(TasksManager.TASK_PRINT_FORMAT.format(
-                name=name,
-                repetition=properties["repetition"],
-                last_completion_date=properties["last_completion_date"]
-            ))
+        for task in tasks:
+            print(task)
 
     @staticmethod
     def start_menu():

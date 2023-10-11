@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a4050e0-8c60-476a-ba20-24344acd8a75" name="Changes" comment="Nothing to mention.">
-      <change afterPath="$PROJECT_DIR$/src/data/managers/_tasks_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_scripts/Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_scripts/Interface.py" afterDir="false" />
-    </list>
+    <list default="true" id="8e680903-0255-46e6-9cdb-acc9fd55546d" name="Changes" comment="Fixing Bugs. Created TASK_CSV_FORMAT in Task. complete_task is working!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,109 +18,57 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="development" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsbtTreeLayoutManager">
-    <layout place="tools.popupGrunt">
-      <scroll-view-position x="0" y="0" />
-    </layout>
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/data_manager/tasks_manager.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2WYWRr5JF9MjwuKUdpw7mTwvlNr" />
+  <component name="ProjectId" id="2UkeGhihjPu69EQmuiNda1UCJjC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Dev/periodic_tasks&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/My Drive.lnk&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asems\My Drive\Dev\repeatitive_tasks\src\data" />
+      <recent name="C:\Users\asems\My Drive\Dev\repeatitive_tasks\src\main_scripts" />
+      <recent name="C:\Users\asems\My Drive\Dev\repeatitive_tasks\src" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="DjangoTestsConfigurationType">
-      <module name="repeatitive_tasks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <module name="repeatitive_tasks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="repeatitive_tasks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="periodic_tasks" />
+      <module name="repeatitive_tasks" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.10 (tic_tac_toe)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -138,68 +81,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <module name="repeatitive_tasks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="repeatitive_tasks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Docutils task">
-      <module name="repeatitive_tasks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docs" factoryName="Sphinx task">
-      <module name="repeatitive_tasks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -207,74 +90,176 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5a4050e0-8c60-476a-ba20-24344acd8a75" name="Changes" comment="" />
-      <created>1696909989184</created>
+      <changelist id="8e680903-0255-46e6-9cdb-acc9fd55546d" name="Changes" comment="" />
+      <created>1693487911931</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1696909989184</updated>
-      <workItem from="1696909990222" duration="1739000" />
-      <workItem from="1696919302900" duration="26000" />
-      <workItem from="1696919357458" duration="69000" />
-      <workItem from="1696919428269" duration="39000" />
-      <workItem from="1696919468847" duration="1993000" />
-      <workItem from="1696930888701" duration="4747000" />
+      <updated>1693487911931</updated>
+      <workItem from="1693569121241" duration="739000" />
+      <workItem from="1693648125402" duration="884000" />
+      <workItem from="1693749496098" duration="2804000" />
+      <workItem from="1693755028765" duration="1812000" />
+      <workItem from="1693760899167" duration="3836000" />
+      <workItem from="1693796260348" duration="1876000" />
+      <workItem from="1693798230105" duration="1046000" />
+      <workItem from="1693799299954" duration="793000" />
+      <workItem from="1693834975324" duration="1136000" />
+      <workItem from="1693933891199" duration="3013000" />
+      <workItem from="1694182537358" duration="67000" />
+      <workItem from="1694254932402" duration="5140000" />
+      <workItem from="1694264420446" duration="33000" />
+      <workItem from="1694603848707" duration="32000" />
+      <workItem from="1695115805886" duration="7000" />
     </task>
-    <task id="LOCAL-00001" summary="Nothing to mention.">
+    <task id="LOCAL-00001" summary="Late Commit. Switching to OOP.">
       <option name="closed" value="true" />
-      <created>1696910894740</created>
+      <created>1693490648248</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1696910894740</updated>
+      <updated>1693490648248</updated>
     </task>
-    <task id="LOCAL-00002" summary="Nothing to mention.">
+    <task id="LOCAL-00002" summary="added tasks_manager.py">
       <option name="closed" value="true" />
-      <created>1696910905663</created>
+      <created>1693492452236</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1696910905663</updated>
+      <updated>1693492452236</updated>
     </task>
-    <task id="LOCAL-00003" summary="Nothing to mention.">
+    <task id="LOCAL-00003" summary="Added task in data package; moved tasks_manager.py to data\managers; Added MainClass">
       <option name="closed" value="true" />
-      <created>1696910948830</created>
+      <created>1693751385281</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1696910948830</updated>
+      <updated>1693751385281</updated>
     </task>
-    <task id="LOCAL-00004" summary="Nothing to mention.">
+    <task id="LOCAL-00004" summary="Completed Task.py (for now)">
       <option name="closed" value="true" />
-      <created>1696926046138</created>
+      <created>1693755419009</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1696926046138</updated>
+      <updated>1693755419009</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed a bug in MainClass">
+      <option name="closed" value="true" />
+      <created>1693755597947</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693755597947</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Working on tasks_manager.py">
+      <option name="closed" value="true" />
+      <created>1693756850003</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693756850003</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Done with TasksManager static class; moved DATETIME_FORMAT to __init__.py">
+      <option name="closed" value="true" />
+      <created>1693766268515</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693766268515</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Done with is_due function">
+      <option name="closed" value="true" />
+      <created>1693796716078</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693796716078</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Used Task class instead of bare parameters">
+      <option name="closed" value="true" />
+      <created>1693797501100</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1693797501100</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Done Coding; Testing Starts!">
+      <option name="closed" value="true" />
+      <created>1693799197314</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1693799197314</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixing Bugs">
+      <option name="closed" value="true" />
+      <created>1693800067133</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1693800067133</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixing Bugs">
+      <option name="closed" value="true" />
+      <created>1693836090102</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1693836090102</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixing Bugs. Created TASK_PRINT_FORMAT in Task class and moved DATETIME_FORMAT there.">
+      <option name="closed" value="true" />
+      <created>1694255884192</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694255884192</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixing Bugs. Created TASK_CSV_FORMAT in Task. complete_task is working!">
+      <option name="closed" value="true" />
+      <created>1694260075421</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1694260075421</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Nothing to mention." />
-    <option name="LAST_COMMIT_MESSAGE" value="Nothing to mention." />
+    <MESSAGE value="Late Commit. Switching to OOP." />
+    <MESSAGE value="added tasks_manager.py" />
+    <MESSAGE value="Added task in data package; moved tasks_manager.py to data\managers; Added MainClass" />
+    <MESSAGE value="Completed Task.py (for now)" />
+    <MESSAGE value="Fixed a bug in MainClass" />
+    <MESSAGE value="Working on tasks_manager.py" />
+    <MESSAGE value="Done with TasksManager static class; moved DATETIME_FORMAT to __init__.py" />
+    <MESSAGE value="Done with is_due function" />
+    <MESSAGE value="Used Task class instead of bare parameters" />
+    <MESSAGE value="Done Coding; Testing Starts!" />
+    <MESSAGE value="Fixing Bugs" />
+    <MESSAGE value="Fixing Bugs. Created TASK_PRINT_FORMAT in Task class and moved DATETIME_FORMAT there." />
+    <MESSAGE value="Fixing Bugs. Created TASK_CSV_FORMAT in Task. complete_task is working!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing Bugs. Created TASK_CSV_FORMAT in Task. complete_task is working!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/data/managers/tasks_manager.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/periodic_tasks$main.coverage" NAME="main Coverage Results" MODIFIED="1696934778168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/repeatitive_tasks$main.coverage" NAME="main Coverage Results" MODIFIED="1696926219293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/periodic_tasks$Task.coverage" NAME="Task Coverage Results" MODIFIED="1696910382597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data" />
+    <SUITE FILE_PATH="coverage/repeatitive_tasks$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1693799244527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main_scripts" />
+    <SUITE FILE_PATH="coverage/repeatitive_tasks$MainClass.coverage" NAME="MainClass Coverage Results" MODIFIED="1693799217842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main_scripts" />
+    <SUITE FILE_PATH="coverage/repeatitive_tasks$main.coverage" NAME="main Coverage Results" MODIFIED="1694260008983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/repeatitive_tasks$tasks_manager.coverage" NAME="tasks_manager Coverage Results" MODIFIED="1693799659166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/data/managers" />
   </component>
 </project>
