@@ -5,12 +5,19 @@ from src.data.Task import Task
 
 class TasksManager:
     FILE_PATH = 'data/repeated_tasks.csv'
-
+    __instance = None
     file = None
 
+    def __new__(cls, *args, **kwargs):
+        if cls.__instance is None:
+            cls.__instance = super(TasksManager, cls).__new__(cls)
+
+        return cls.__instance
+
     def __init__(self):
-        with open(TasksManager.FILE_PATH, "a"):
-            ...
+        with open(TasksManager.FILE_PATH, "a+") as file:
+            file.seek(0)
+            self.data = file.read()
 
         if TasksManager.file is None:
             TasksManager.file = open(TasksManager.FILE_PATH, "r+")
