@@ -10,9 +10,11 @@ class Interface:
 2- View Tasks
 3- Add Task
 4- Complete Task
-5- Delete Task"""
+5- Delete Task
+6- Save & Exit
+7- Exit Without Saving"""
     )
-    OPTIONS_NO = 5
+    OPTIONS_NO = 7
     tasks_manager = TasksManager()
 
     @staticmethod
@@ -60,6 +62,10 @@ class Interface:
 
     @staticmethod
     def print_tasks(tasks):
+        if not tasks:
+            print("No tasks found.")
+            return
+
         print(Task.TASK_PRINT_FORMAT.format(
                 name="Name:",
                 repetition="Repetition",
@@ -88,3 +94,8 @@ class Interface:
         elif picked_option == 5:
             task_name = Interface.take_existing_task_name()
             Interface.tasks_manager.delete_task(task_name)
+        elif picked_option == 6:
+            Interface.tasks_manager.save()
+            exit()
+        elif picked_option == 7:
+            exit()
