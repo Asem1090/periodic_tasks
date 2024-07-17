@@ -1,4 +1,4 @@
-from src.main_scripts.Interface import Interface
+from main_scripts.interface import Interface
 
 
 class MainClass:

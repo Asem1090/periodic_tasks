@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from src.data.Task import Task
-from src.data.managers.tasks_manager import TasksManager
+from data.task import Task
+from data.managers.tasks_manager import TasksManager
 
 
 class Interface:

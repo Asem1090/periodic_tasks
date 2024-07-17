@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from src.data.Task import Task
+from data.task import Task
 
 
 class TasksManager:
