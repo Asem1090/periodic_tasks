@@ -1,6 +1,6 @@
 from main_scripts.main_class import MainClass
 
-def main():
+def main() -> None:
     MainClass.run()
 
 
