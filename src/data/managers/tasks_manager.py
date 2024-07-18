@@ -1,10 +1,9 @@
 from datetime import datetime
-
 from data.task import Task
 
 
 class TasksManager:
-    FILE_PATH = 'data/repeated_tasks.csv'
+    FILE_PATH = '../repeated_tasks.csv'
     __instance = None
     file = None
 
