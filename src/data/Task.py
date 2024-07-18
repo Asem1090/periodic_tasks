@@ -20,22 +20,12 @@ class Task:
             last_completion_date=self.last_completion_date.strftime(Task.DATETIME_FORMAT)
         )
 
-    @staticmethod
-    def from_csv(csv_line: str) -> Task:
-        task_name, task_repetition, last_completion_date = csv_line.rstrip("\n").split(",")
-
-        return Task(task_name, task_repetition, datetime.strptime(last_completion_date, Task.DATETIME_FORMAT))
-
-    @staticmethod
-    def task_to_csv(name: str, repetition: int, last_completion_date: datetime):
-        return Task.TASK_CSV_FORMAT.format(
-            name=name,
-            repetition=repetition,
-            last_completion_date=last_completion_date.strftime(Task.DATETIME_FORMAT)
-        ) + "\n"
-
     def to_csv(self):
-        return Task.task_to_csv(self.name, self.repetition, self.last_completion_date)
+        return Task.TASK_CSV_FORMAT.format(
+            name=self.name,
+            repetition=self.repetition,
+            last_completion_date=self.last_completion_date.strftime(Task.DATETIME_FORMAT)
+        ) + "\n"
 
     def is_due(self) -> bool:
         return (datetime.now() - self.last_completion_date).days >= self.repetition
