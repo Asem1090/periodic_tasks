@@ -26,7 +26,7 @@ class Interface:
                 if 1 <= option <= Interface.OPTIONS_NO:
                     break
 
-            except ValueError as e:
+            except ValueError:
                 continue
 
         return option
@@ -45,7 +45,7 @@ class Interface:
 
                 if task_repetition > 0:
                     break
-            except ValueError as e:
+            except ValueError:
                 continue
 
         return Task(task_name, task_repetition, datetime.now())
