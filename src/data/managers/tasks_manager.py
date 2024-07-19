@@ -3,7 +3,7 @@ from data.task import Task
 
 
 class TasksManager:
-    FILE_PATH = '../repeated_tasks.csv'
+    FILE_PATH = 'repeated_tasks.csv'
     __instance: 'TasksManager' = None
     file = None
 
